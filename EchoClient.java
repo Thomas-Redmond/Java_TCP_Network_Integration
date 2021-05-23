@@ -1,9 +1,9 @@
-package TCP_Network;
+package TCP;
 
 import java.net.*;
 import java.io.*;
 
-public class TCP_Client{
+public class EchoClient{
   private Socket clientSocket;
   private PrintWriter out;
   private BufferedReader in;
@@ -26,9 +26,13 @@ public class TCP_Client{
     clientSocket.close();
   }
 
-  public static void main(String[] args){
-    startConnection("127.0.0.1", 6666);
+  public static void main(String[] args) throws IOException{
+    EchoClient EC = new EchoClient();
+    EC.startConnection("127.0.0.1", 6666);
+    EC.sendMessage("Bananas");
+    Ec.stopConnection();
 
+    System.out.println("Connection terminated");
   }
 
 }
