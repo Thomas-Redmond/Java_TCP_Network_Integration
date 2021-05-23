@@ -28,9 +28,9 @@ public class EchoClient{
 
   public static void main(String[] args) throws IOException{
     EchoClient EC = new EchoClient();
-    EC.startConnection("127.0.0.1", 6666);
+    EC.startConnection("172.16.3.43", 6666);
     EC.sendMessage("Bananas");
-    Ec.stopConnection();
+    EC.stopConnection();
 
     System.out.println("Connection terminated");
   }
